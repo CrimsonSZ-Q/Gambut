@@ -39,6 +39,8 @@
             gif2.style.display = 'block';
             text1.style.display = 'none';
             text2.style.display = 'block';
+            btn1.style.display = 'none';
+            btn2.style.display = 'none';
         });
 
         btn2.addEventListener('click',() => {
@@ -54,6 +56,14 @@
                 createAnimation(container,'love');
             }
         });
+
+        document.getElementById('sadBtn').addEventListener('click', function(){
+            const container = document.getElementById('animationContainer');
+            for (let i = 0; i < 100; i++){
+                createAnimation(container,'sad');
+            }
+        });
+
 
         function createAnimation(container, type){
             const element = document.createElement('div');
