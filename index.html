@@ -80,14 +80,12 @@
         btn3.addEventListener('click', () =>{
             const maxX = window.innerWidth - btn3.offsetWidth;
             const maxY = window.innerHeight - btn3.offsetHeight;
-            const minX = Math.floor(Math.random() * maxX);
-            const minY = Math.floor(Math.random() * maxY);
+            const newX = Math.floor(Math.random() * maxX);
+            const newY = Math.floor(Math.random() * maxY);
 
             btn3.style.top = '${newY}px';
             btn3.style.left = '${newX}px';
-        })
-        
-
+        });
     </script>
 </body>
 </html>
