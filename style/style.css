@@ -35,7 +35,7 @@ h1{
 #sadBtn{
     position: absolute;
     top: 60%;
-    left: 40%;
+    right: 10%;
     transform: translate(-50%, -50%);
     height: 50px;
     width: 80px;
