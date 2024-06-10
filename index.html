@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text">
+        <h1>I have crush on you <br> maukah kamu jadi pacarku?</h1>
+        <h1 style="display: none;">Yeeyy sekarang kita pacaran</h1>
+    </div>
+    <div class="gif">
+        <img height="150" width="200" src="media/bunga.gif" alt="">
+        <img style="display: none;" height="150" width="200" src="media/yeay.webp" alt="">
+    </div>
+    <button id="loveBtn">mauu bgt</button>
+    <button id="sadBtn">gak mau</button>
+    <div id="animationContainer"></div>
+
+    <script>
+        const btn1 = document.getElementById('loveBtn');
+        const btn2 = document.getElementById('sadBtn');
+        const btn3 = document.getElementById('sadBtn');
+        const gif1 = document.querySelector('.gif img:nth-child(1)');
+        const gif2 = document.querySelector('.gif img:nth-child(2)');
+        const text1 = document.querySelector('.text h1:nth-child(1)');
+        const text2 = document.querySelector('.text h1:nth-child(2)');
+
+        function reset(){
+            const src = gif1.src
+            gif1.src = src
+        }
+        setInterval(reset, 2000)
+
+        btn1.addEventListener('click',() =>{
+            gif1.style.display = 'none';
+            gif2.style.display = 'block';
+            text1.style.display = 'none';
+            text2.style.display = 'block';
+        });
+
+        btn2.addEventListener('click',() => {
+            gif1.style.display = 'block';
+            gif2.style.display = 'none';
+            text1.style.display = 'block';
+            text2.style.display = 'none';
+        });
+
+        document.getElementById('loveBtn').addEventListener('click', function(){
+            const container = document.getElementById('animationContainer');
+            for (let i = 0; i < 100; i++){
+                createAnimation(container,'love');
+            }
+        });
+
+        function createAnimation(container, type){
+            const element = document.createElement('div');
+            element.classList.add(type);
+            element.style.left = Math.random() * 100 + 'vw';
+            element.style.animationDuration = Math.random() * 2 + 3 + 's';
+            container.appendChild(element);
+
+            setTimeout(() =>{
+                element.remove();
+            }, 7000);
+        }
+
+        btn3.addEventListener('click', () =>{
+            const maxX = window.innerWidth - btn3.offsetWidth;
+            const maxY = window.innerHeight - btn3.offsetHeight;
+            const minX = Math.floor(Math.random() * maxX);
+            const minY = Math.floor(Math.random() * maxY);
+
+            btn3.style.top = '${newY}px';
+            btn3.style.left = '${newX}px';
+        })
+        
+
+    </script>
+</body>
+</html>
