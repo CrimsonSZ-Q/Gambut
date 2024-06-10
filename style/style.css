@@ -20,3 +20,15 @@ h1{
     left: 47%;
     transform: translate(-50%, -50%);
 }
+
+#loveBtn{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 80px;
+    background-color: crimson;
+    border-radius: 10px;
+    cursor: pointer;
+}
