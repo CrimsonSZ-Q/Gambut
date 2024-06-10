@@ -28,7 +28,7 @@ h1{
     transform: translate(-50%, -50%);
     height: 50px;
     width: 80px;
-    background-color: crimson;
+    background-color: #FFA2B9;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -39,7 +39,7 @@ h1{
     transform: translate(-50%, -50%);
     height: 50px;
     width: 80px;
-    background-color: crimson;
+    background-color: #FFA2B9;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -100,7 +100,7 @@ h1{
         transform: translate(-50%, -50%);
         height: 50px;
         width: 80px;
-        background-color: crimson;
+        background-color: #FFA2B9;
         border-radius: 10px;
         cursor: pointer;
     }
@@ -111,7 +111,7 @@ h1{
         transform: translate(-50%, -50%);
         height: 50px;
         width: 80px;
-        background-color: crimson;
+        background-color: #FFA2B9;
         border-radius: 10px;
         cursor: pointer;
     }
